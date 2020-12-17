@@ -1,4 +1,8 @@
-class Craze4Arrays{
+class Craze4Arrays {
+
+    getNumberOfOccurrences(inputArray, valueToEvaluate) {
+
+    }
 
     /** 
         @param objectArray    an array of any type of Object
@@ -24,7 +28,7 @@ class Craze4Arrays{
      * @return the least frequently occurring object in the array
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
-   getLeastCommon(objectArray) {
+    getLeastCommon(objectArray) {
         return null;
     }
 

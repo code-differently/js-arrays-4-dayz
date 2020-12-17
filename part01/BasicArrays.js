@@ -35,10 +35,7 @@ class BasicArrays {
      * @return String made up of the first character in each element of stringArray
      */
     getFirstLetterOfEachElement(stringArray) {
-        for (let i = 0; i < stringArray.length; i++) {
-
-        }
-        return null;
+        return stringArray.map(word => word.charAt(0)).join("");
     }
 }
 
