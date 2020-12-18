@@ -4,7 +4,7 @@ class BasicArrays{
      * @return the first element in the array
      */
     getFirstElement(stringArray) {
-        return null;
+        return stringArray[0];
     }
 
     /**
@@ -12,7 +12,7 @@ class BasicArrays{
      * @return the second element in the array
      */
     getSecondElement(stringArray) {
-        return null;
+        return stringArray[1];
     }
 
     /**
@@ -20,7 +20,11 @@ class BasicArrays{
      * @return stringArray with the elements in reverse order
      */
     reverse(stringArray) {
-        return null;
+        let newArray = [];
+        for(let i = stringArray.length - 1; i >= 0; i--){
+            newArray.push(stringArray[i]);
+        }
+        return newArray;
     }
 
     /**
@@ -28,7 +32,12 @@ class BasicArrays{
      * @return String made up of the first character in each element of stringArray
      */
    getFirstLetterOfEachElement(stringArray) {
-        return null;
+       let output = "";
+       for(let i = 0; i < stringArray.length; i++){
+         console.log(i);  
+         output += stringArray[i][0];
+       }
+        return output;
     }   
 }
 
