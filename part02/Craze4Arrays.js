@@ -31,6 +31,27 @@ class Craze4Arrays {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     getMostCommon(objectArray) {
+        // I know I could use getNumberOfOccurrences() here but I wanted to try out a Javascript hashmap.
+        let map = new Map();
+        for (let i = 0; i < objectArray.length; i++) {
+            if (map.has(objectArray[i])) {
+                let timeAppears = map.get(objectArray[i]);
+                map.set(objectArray[i], timeAppears + 1);
+            } else {
+                map.set(objectArray[i], 1);
+            }
+        }
+
+        let highestTimesAppears = -1;
+        let highestNum = -1;
+        for (let k of map) {
+            if (k[1] > highestTimesAppears) {
+                highestTimesAppears = k[1];
+                highestNum = k[0];
+            }
+        }
+        return highestNum;
+
     }
     /**
      * @param objectArray an array of any type of Object
@@ -49,17 +70,14 @@ class Craze4Arrays {
             }
         }
 
-        let lowestTimesAppears = 1000;
-        let lowestNum = Infinity;
+        let lowestTimesAppears = Infinity;
+        let lowestNum = -1;
         for (let k of map) {
-            console.log(k);
-            console.log(map.get(k));
             if (k[1] < lowestTimesAppears) {
                 lowestTimesAppears = k[1];
                 lowestNum = k[0];
             }
         }
-
         return lowestNum;
     }
 
@@ -72,7 +90,6 @@ class Craze4Arrays {
     mergeArrays(objectArray, objectArrayToAdd) {
         return objectArray.concat(objectArrayToAdd);
     }
-
 }
 
 
