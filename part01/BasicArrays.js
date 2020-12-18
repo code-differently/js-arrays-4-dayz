@@ -34,7 +34,6 @@ class BasicArrays{
    getFirstLetterOfEachElement(stringArray) {
        let output = "";
        for(let i = 0; i < stringArray.length; i++){
-         console.log(i);  
          output += stringArray[i][0];
        }
         return output;

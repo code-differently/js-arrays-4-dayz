@@ -26,6 +26,14 @@ test("removeValueTest1", () => {
     expect(actual).toEqual(expected);
 });
 
+test("getMostCommonTest", () => {
+    let craze4Arrays = new Craze4Arrays();
+    let expected = 4;
+    let inputArray = [1,1,2,3,3,3,4,4,4,4];
+    let actual = craze4Arrays.getMostCommon(inputArray);
+    expect(actual).toEqual(expected);
+})
+
 test("getLeastCommonTest", () => {
     let craze4Arrays = new Craze4Arrays();
     let expected = 2;
