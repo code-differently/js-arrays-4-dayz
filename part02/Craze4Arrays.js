@@ -58,7 +58,6 @@ class Craze4Arrays{
         let result = objectArray.concat(objectArrayToAdd);
             return result;
     }
-
 }
 
 

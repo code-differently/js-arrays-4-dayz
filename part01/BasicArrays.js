@@ -47,6 +47,5 @@ class BasicArrays{
         return result;
     }
     
-
 }
 module.exports = BasicArrays;
