@@ -30,7 +30,9 @@ test("getLeastCommonTest", () => {
     let craze4Arrays = new Craze4Arrays();
     let expected = 2;
     let inputArray = [1,1,2,3,3,3,4,4,4,4];
+    
     let actual = craze4Arrays.getLeastCommon(inputArray);
+    
     expect(actual).toEqual(expected);
 });
 
@@ -39,6 +41,8 @@ test("mergeArraysTest", () => {
     let array1 = [1,1,1,2,2,2];
     let array2 = [3,3,3,4,4,4];
     let expected = [1,1,1,2,2,2,3,3,3,4,4,4];
+    
     let actual = craze4Arrays.mergeArrays(array1, array2);
+    
     expect(actual).toEqual(expected);
 });
