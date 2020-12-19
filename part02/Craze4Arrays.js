@@ -1,5 +1,17 @@
 class Craze4Arrays{
 
+    getNumberOfOccurrences(objectArray, objectToEvaluate) {
+        let numOfOccurrences = 0;
+        
+        for (let i = 0; i<objectArray.length; ++i ){
+            if (objectArray[i] == objectToEvaluate)
+            numOfOccurrences++;
+        }
+        return numOfOccurrences;
+    }
+
+
+
     /** 
         @param objectArray    an array of any type of Object
         @param objectToRemove a value to be removed from the `objectArray`
