@@ -34,7 +34,7 @@ class Craze4Arrays{
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    pmergeArrays(objectArray, objectArrayToAdd) {
+    mergeArrays(objectArray, objectArrayToAdd) {
         return null;
     }
 
