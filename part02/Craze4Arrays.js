@@ -19,7 +19,15 @@ class Craze4Arrays{
         Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
     */
     removeValue(objectArray, objectToRemove) {
-        return null;
+        // let index = objectArray.indexOf(objectToRemove);
+        for (let i=0; i<objectArray.length; i++){
+        if (objectArray[i] === objectToRemove){
+            objectArray.splice(i, 1);
+            i--;
+        }
+       } 
+    //    let removed = objectArray.pop();
+        return  objectArray;
     }
 
     /**
