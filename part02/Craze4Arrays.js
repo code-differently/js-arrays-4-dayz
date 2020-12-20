@@ -7,7 +7,16 @@ class Craze4Arrays{
         Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
     */
     removeValue(objectArray, objectToRemove) {
-        return null;
+        
+        let i = 0;
+        while(i < objectArray.length) {
+            if (objectArray[i] === objectToRemove) {
+                objectArray.splice(i, 1);
+            }else {
+                ++i;
+            }
+        }
+        return objectArray;
     }
 
     /**
@@ -16,7 +25,24 @@ class Craze4Arrays{
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     getMostCommon(objectArray) {
-        return null;
+
+        var counts = {};
+        var compare = 0;
+        var mostFrequent;
+
+        for(var i = 0, len = objectArray.length; i < len; i++){
+            var num = objectArray[i];
+            if(counts[num] === undefined){
+                counts[num] = 1;
+            }else{
+                counts[num] = counts[num] + 1;
+            }
+            if(counts[num] > compare){
+                  compare = counts[num];
+                  mostFrequent = objectArray[i];
+            }
+         }
+       return mostFrequent;
     }
 
     /**
@@ -24,8 +50,14 @@ class Craze4Arrays{
      * @return the least frequently occurring object in the array
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
-   getLeastCommon(objectArray) {
-        return null;
+    getLeastCommon(objectArray) {
+        
+    const result = [...objectArray.reduce((r, n) => // create a map of occurrences
+        r.set(n, (r.get(n) || 0) + 1), new Map()
+      )]
+      .reduce((r, v) => v[1] < r[1] ? v : r)[0]; // get the the item that appear less times
+    
+        return result;
     }
 
     /**
@@ -34,8 +66,9 @@ class Craze4Arrays{
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    pmergeArrays(objectArray, objectArrayToAdd) {
-        return null;
+    mergeArrays(objectArray, objectArrayToAdd) {
+    
+        return objectArray.concat(objectArrayToAdd);
     }
 
 }

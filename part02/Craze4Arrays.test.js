@@ -2,15 +2,11 @@ const { TestScheduler } = require('jest');
 const Craze4Arrays = require('./Craze4Arrays');
 
 
-test("getNumberOfOccurrencesTest1", () => {
-
+test("getMostCommon", () => {
     let craze4Arrays = new Craze4Arrays();
-    let valueToEvaluate = 7;
-    let expected = 3;
+    let expected = 7
     let inputArray = [1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7];
-
-    let actual = craze4Arrays.getNumberOfOccurrences(inputArray, valueToEvaluate);
-
+    let actual = craze4Arrays.getMostCommon(inputArray);
     expect(actual).toEqual(expected);
 });
 
