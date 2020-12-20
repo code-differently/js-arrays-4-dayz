@@ -17,7 +17,7 @@ test("getSecondTest", () => {
 
     let basicArrays = new BasicArrays();
     let inputArray = ["The", "quick", "brown"];
-    let expected = "The";
+    let expected = "quick";
 
     let actual = basicArrays.getSecondElement(inputArray);
 
@@ -38,7 +38,7 @@ test("reverseArrayTest", () => {
 test("firstLetterTest", () => {
 
     let basicArrays = new BasicArrays();
-    let inputArray = ["The", "quick", "brown"];
+    let inputArray = ["The", "quick", "brown", "fox"];
     let expected = "Tqbf";
 
     let actual = basicArrays.getFirstLetterOfEachElement(inputArray);
