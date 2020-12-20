@@ -40,7 +40,8 @@ class Craze4Arrays{
         let newArr = objectArray.concat(objectArrayToAdd);
          return newArr;
      }
-
+        return null;
+    }
 }
 
 
