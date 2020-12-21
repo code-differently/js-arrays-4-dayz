@@ -7,7 +7,12 @@ class Craze4Arrays{
         Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
     */
     removeValue(objectArray, objectToRemove) {
-        return null;
+        for(let i = 0; i <= objectArray.length - 1; i--){
+            if(objectArray[i] == objectToRemove){
+                objectArray.splice(i, 1);
+            }
+        }
+        return newArray;
     }
 
     /**
@@ -15,7 +20,8 @@ class Craze4Arrays{
      * @return the most frequently occurring object in the array
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
-    getMostCommon(objectArray) {
+    getNumberOfOccurences(objectArray) {
+        
         return null;
     }
 
@@ -34,10 +40,10 @@ class Craze4Arrays{
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    pmergeArrays(objectArray, objectArrayToAdd) {
-        return null;
+    mergeArrays(objectArray, objectArrayToAdd) {
+        let mergedArr = objectArray.concat(objectArrayToAdd);
+        return mergedArr;
     }
-
 }
 
 
