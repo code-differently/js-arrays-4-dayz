@@ -31,7 +31,9 @@ class Craze4Arrays{
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
    getLeastCommon(objectArray) {
-        return null;
+    let lestCommon = objectArray.sort((a,b) => 
+    objectArray.filter(v => v === a).length - objectArray.filter(v => v === b).length).pop();
+    return leastCommon;
     }
 
     /**
