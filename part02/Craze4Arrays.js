@@ -20,9 +20,14 @@ class Craze4Arrays{
      * @return the most frequently occurring object in the array
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
-    getNumberOfOccurences(objectArray) {
-        
-        return null;
+    getNumberOfOccurences(inputArray, valueToEvaluate) {
+        let count = 0;
+        for(let i = 0; i < inputArray.length; i++){
+            if(inputArray[i] === valueToEvaluate ){
+                count++
+            }
+        }
+        return count;
     }
 
     /**
@@ -31,7 +36,7 @@ class Craze4Arrays{
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
    getLeastCommon(objectArray) {
-    let lestCommon = objectArray.sort((a,b) => 
+    let leastCommon = objectArray.sort((a,b) => 
     objectArray.filter(v => v === a).length - objectArray.filter(v => v === b).length).pop();
     return leastCommon;
     }
