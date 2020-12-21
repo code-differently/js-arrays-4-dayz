@@ -17,7 +17,7 @@ test("getSecondTest", () => {
 
     let basicArrays = new BasicArrays();
     let inputArray = ["The", "quick", "brown"];
-    let expected = "The";
+    let expected = "quick";
 
     let actual = basicArrays.getSecondElement(inputArray);
 
