@@ -1,4 +1,10 @@
 class Craze4Arrays{
+    getNumberOfOccurrences(inputArray, valueToEvaluate){
+        return inputArray.reduce((acc,elem) => {
+            return (valueToEvaluate === elem ? acc + 1 : acc)
+
+        },0);
+    }
 
     /** 
         @param objectArray    an array of any type of Object
@@ -6,9 +12,7 @@ class Craze4Arrays{
         @return an array with identical content excluding the specified `objectToRemove`
         Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
     */
-    removeValue(objectArray, objectToRemove) {
-        return null;
-    }
+    removeValue = (objectArray, objectToRemove) => objectArray.filter((val) => val !== objectToRemove ); 
 
     /**
      * @param objectArray an array of any type of Object
@@ -16,7 +20,10 @@ class Craze4Arrays{
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     getMostCommon(objectArray) {
-        return null;
+        let mostOutput = objectArray.sort((a,b) =>
+             objectArray.filter((val) => val === a).length - objectArray.filter((val) => val === b).length).pop();
+         return mostOutput;
+     
     }
 
     /**
@@ -24,8 +31,10 @@ class Craze4Arrays{
      * @return the least frequently occurring object in the array
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
-   getLeastCommon(objectArray) {
-        return null;
+    getLeastCommon(objectArray) {
+        let leastOutput = objectArray.sort((a,b) =>
+        objectArray.filter((val) => val === b).length - objectArray.filter((val) => val === a).length).pop();
+                return leastOutput;
     }
 
     /**
@@ -35,7 +44,8 @@ class Craze4Arrays{
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     mergeArrays(objectArray, objectArrayToAdd) {
-        return null;
+       let output = objectArray.concat(objectArrayToAdd);
+        return output;
     }
 
 }
