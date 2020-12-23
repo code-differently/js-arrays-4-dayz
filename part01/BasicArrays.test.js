@@ -17,25 +17,25 @@ test("getSecondTest", () => {
 
     let basicArrays = new BasicArrays();
     let inputArray = ["The", "quick", "brown"];
-    let expected = "The";
+    let expected = "quick";
 
     let actual = basicArrays.getSecondElement(inputArray);
 
     expect(actual).toEqual(expected);
 });
 
-test("reverseArrayTest", () => {
+  test("reverseArrayTest", () => {
 
     let basicArrays = new BasicArrays();
-    let inputArray = ["The", "quick", "brown"];
-    let expected = ["brown", "quick", "The"];
+      let inputArray = ["The", "quick", "brown"];
+      let expected = ["brown", "quick", "The"];
 
-    let actual = basicArrays.reverse(inputArray);
+      let actual = basicArrays.reverse(inputArray);
 
-    expect(actual).toEqual(expected);
-});
+      expect(actual).toEqual(expected);
+  });
 
-test("firstLetterTest", () => {
+ test("firstLetterTest", () => {
 
     let basicArrays = new BasicArrays();
     let inputArray = ["The", "quick", "brown", "fox"];
@@ -45,3 +45,4 @@ test("firstLetterTest", () => {
 
     expect(actual).toEqual(expected);
 });
+
